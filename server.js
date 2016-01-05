@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-
 const path = require('path');
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pizza Express';
+app.use(express.static('static'));
 
 app.get('/', (request, response) => {
   response.sendFile(path.join(__dirname, '/static/index.html'));
