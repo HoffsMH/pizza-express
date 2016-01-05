@@ -33,7 +33,6 @@ describe('Server', () => {
     it('should return a 200', (done) => {
       this.request.get('/', (error, response) => {
         if (error) { done(error); }
-        // assert.equal(response.statusCode, 200);
         expect(response.statusCode).to.eq(200)
         done();
       });
@@ -44,8 +43,10 @@ describe('Server', () => {
 
       this.request.get('/', (error, response) => {
         if (error) { done(error); }
-        assert(response.body.includes(title),
-        `"${response.body}" does not include "${title}".`);
+        // assert(response.body.includes(title),
+        // `"${response.body}" does not include "${title}".`);
+
+        expect(response.body).to.include(title);
         done();
       });
     });
