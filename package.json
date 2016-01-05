@@ -17,7 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "chai": "^3.4.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
