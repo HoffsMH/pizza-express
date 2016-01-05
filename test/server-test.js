@@ -1,5 +1,6 @@
 const assert = require('assert');
 const app    = require('../server');
+const request = require('request');
 
 const _      = require("lodash");
 const chai   = require('chai');
