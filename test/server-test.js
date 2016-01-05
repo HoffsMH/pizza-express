@@ -19,6 +19,10 @@ describe('Server', () => {
       baseUrl: 'http://localhost:9876/'
     });
   });
+  
+  beforeEach(() => {
+    app.locals.pizzas = {};
+  });
 
   after(() => {
     this.server.close();
