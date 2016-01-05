@@ -16,6 +16,7 @@
   "author": "Matt Hecker",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "chai": "^3.4.1",
     "express": "^4.13.3",
     "jade": "^1.11.0"
