@@ -1,0 +1,21 @@
+{
+  "name": "pizza-express",
+  "version": "1.0.0",
+  "description": "A place to admire pizzas",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tdb"
+  },
+  "keywords": [
+    "taco"
+  ],
+  "author": "Matt Hecker",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
