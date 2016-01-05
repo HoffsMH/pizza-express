@@ -24,4 +24,13 @@ describe('Server', () => {
   it('should exist', () => {
     expect(app).to.not.be.undefined
   });
+
+  describe('GET /', () => {
+    it('should return a 200', (done) => {
+      request.get('http://localhost:9876', (error, response) => {
+        assert.equal(response.statusCode, 200);
+        done();
+      });
+    });
+  });
 });
