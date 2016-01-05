@@ -15,6 +15,9 @@ describe('Server', () => {
       if (err) { return done(err); }
       done();
     });
+    this.request = request.defaults({
+      baseUrl: 'http://localhost:9876/'
+    });
   });
 
   after(() => {
