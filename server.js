@@ -4,12 +4,14 @@ const path = require('path');
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pizza Express';
+app.locals.pizzas = {};
 app.use(express.static('static'));
 app.set('view engine', 'jade');
 
 app.get('/', (request, response) => {
-  response.sendFile(path.join(__dirname, '/static/index.html'));
+  response.render('index');
 });
+
 
 if (!module.parent) {
   app.listen(app.get('port'), () => {
