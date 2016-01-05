@@ -43,10 +43,15 @@ describe('Server', () => {
 
       this.request.get('/', (error, response) => {
         if (error) { done(error); }
-        // assert(response.body.includes(title),
-        // `"${response.body}" does not include "${title}".`);
-
         expect(response.body).to.include(title);
+        done();
+      });
+    });
+
+    it('should not return 404', (done) => {
+      this.request.post('/pizzas', (error, response) => {
+        if (error) { done(error); }
+        expect(response.statusCode).to.not.eq(404)
         done();
       });
     });
