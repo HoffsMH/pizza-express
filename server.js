@@ -5,7 +5,7 @@ app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pizza Express';
 
 app.get('/', (request, response) => {
-  response.send(app.locals.title);
+  response.sendFile(path.join(__dirname, '/static/index.html'));
 });
 
 if (!module.parent) {
