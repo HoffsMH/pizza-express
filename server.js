@@ -19,9 +19,12 @@ app.get('/', (request, response) => {
 });
 
 app.post('/pizzas', (request, response) => {
+   var id = generateId();
+
+   app.locals.pizzas[id] = request.body;
+
    response.sendStatus(201);
 });
-
 
 if (!module.parent) {
   app.listen(app.get('port'), () => {
