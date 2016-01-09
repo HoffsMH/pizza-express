@@ -29,7 +29,7 @@ describe('Server', () => {
   });
 
   it('should exist', () => {
-    expect(app).to.not.be.undefined
+    expect(app).to.not.be.undefined;
   });
 
   describe('GET /', () => {
@@ -37,7 +37,7 @@ describe('Server', () => {
     it('should return a 200', (done) => {
       this.request.get('/', (error, response) => {
         if (error) { done(error); }
-        expect(response.statusCode).to.eq(200)
+        expect(response.statusCode).to.eq(200);
         done();
       });
     });
@@ -55,7 +55,7 @@ describe('Server', () => {
     it('should not return 404', (done) => {
       this.request.post('/pizzas', (error, response) => {
         if (error) { done(error); }
-        expect(response.statusCode).to.not.eq(404)
+        expect(response.statusCode).to.not.eq(404);
         done();
       });
     });
