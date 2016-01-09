@@ -7,9 +7,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pizza Express';
-app.locals.pizzas = {};
 app.use(express.static('static'));
 app.set('view engine', 'jade');
+
+app.locals.pizzas = {};
 
 app.get('/', (request, response) => {
   response.render('index');
