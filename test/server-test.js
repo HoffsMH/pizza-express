@@ -109,5 +109,18 @@ describe('Server', () => {
       });
     });
 
+    it('should return a page that has a list of the ingredients', (done) => {
+      var pizza = app.locals.pizzas.testPizza;
+
+      this.request.get('/pizzas/testPizza', (error, response) => {
+        if (error) { done(error); }
+        _.each(pizza.toppings, (topping) => {
+          assert(response.body.includes(topping),
+          `"${response.body}" does not include "${topping}".`);
+        });
+        done();
+      });
+    });
+
   });
 });
